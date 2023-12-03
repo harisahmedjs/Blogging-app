@@ -1,0 +1,51 @@
+
+
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    color: black;
+  }
+  
+  .instructions {
+    max-width: 600px;
+    margin: 20px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .instructions p {
+    margin: 10px 0;
+    line-height: 1.6;
+  }
+  
+  form {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .email {
+    padding: 8px;
+    width: 200px;
+    margin-right: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .forgot {
+    padding: 8px 16px;
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .forgot:hover {
+    background-color: #45a049;
+  }
+  
