@@ -9,13 +9,20 @@ body{
 
     
 }
-
 .profile-div{
-display: flex;
-background-color:
-#7749F8;
-color: white;
-padding: 10px;
+    display: flex;
+    background-color:#7749F8;
+    color: white;
+    padding: 10px;
+    }
+.profiles-div{
+    color: white;
+    padding: 10px;
+}
+.profile-main{
+    display: flex;
+    background-color:#7749F8;
+    justify-content: space-between;
 }
 h1{
 margin-left: 40px;
@@ -50,7 +57,7 @@ input {
     border-radius: 4px;
 }
 
-button{
+.but{
     background-color: #7749F8;
     Width : 169px;
     Height: 38px;
@@ -73,4 +80,51 @@ height: 190px ;
 background-image:cover ; */
 width: 345px;
 height: 304px;
+}
+.p-btn{
+    
+    padding: .50rem 1rem;
+    outline:none ;
+    border: none;
+    font-size: 2rem;
+   background-color: transparent;
+    cursor: pointer;
+ }
+ .p-btn:hover{
+    border-bottom: 2px solid black;
+  }
+
+.logout{
+
+    /* background-color: red;
+    padding: 1.5rem 0; */
+    padding: .50rem 1rem;
+    outline:none ;
+    border: none;
+    font-size: 2rem;
+   background-color: transparent;
+    cursor: pointer;
+    /* margin-right: 7px; */
+  }
+  .logout:hover{
+    border-bottom: 2px solid black;
+  }
+
+.p-div{
+    margin-top: 8px;
+    margin-right: 7px;
+    margin-bottom: 5px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+
+}
+.img-1{
+    width: 20px;
+    margin-right: 10px;
+    height: auto;
+}
+.links{
+    text-decoration: none;
+    color: black;
 }

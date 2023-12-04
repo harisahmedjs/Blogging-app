@@ -1,0 +1,123 @@
+/* Reset some default styles */
+body, h1, h2, h3, p, ul, li {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #f2f2f2; /* Set a light background color */
+    color: #333; /* Set a default text color */
+}
+
+/* Unique CSS for the Navigation Bar */
+nav.nav {
+    background-color: #7749F8; /* Blue background color */
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav .h1-nav {
+    color: white;
+    margin: 0;
+}
+
+nav .img {
+    max-width: 50px;
+    border-radius: 50%;
+}
+.img {
+    max-width: 80px;
+    border-radius: 30%;
+}
+
+
+nav .username {
+    color: #2c3e50;
+    margin: 0;
+}
+
+.h1-head {
+    /* text-align: center; */
+    padding: 25px;
+    margin-top: 20px;
+    text-align: center;
+    color: #7749F8;
+}
+
+/* Unique CSS for the Blog Form */
+.blog-form {
+    /* max-width: 600px; */
+    /* margin: 0 auto; */
+    padding: 25px;
+}
+
+.title,
+.description {
+    width: 60%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: none;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.description {
+    height: 50px;
+}
+
+.btn {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+
+    /* Hover effect */
+    &:hover {
+        background-color: #2980b9; /* Darker blue on hover */
+    }
+}
+
+/* Unique CSS for the Rendered Blogs */
+
+
+#delete{
+    background-color: white; /* Red background color */
+    /* color: white; */
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+
+    /* Hover effect */
+    &:hover {
+        background-color: red; /* Darker red on hover */
+    }
+}
+
+#update{
+    background-color: white;
+    /* color: white; */
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 1em;
+    
+    &:hover {
+        background-color: red; /* Darker red on hover */
+    }
+}
+.r-image{
+    width: 10rem;
+    height: 100%;
+     border-radius: 20%;
+     border: 5px solid rgb(0, 0, 0);
+}

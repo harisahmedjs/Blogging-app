@@ -3,11 +3,56 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
     <link rel="stylesheet" href="./css/dashboard.css">
+    <link rel="stylesheet" href="./css/profile.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    
+    <title>Document</title>
 </head>
 <body>
-    <h1>gamer</h1>
-    <script type="module" src="./script/dashboard.js"></script>
+    <div class="profile-main">
+    <div class="profiles-div">
+    
+        <h1>Personal Blogging App</h1>
+        </div>
+        <div class="p-div">
+            <div>
+                <button class="p-btn"><a href="home.html" class="links"><i class="ri-home-3-line"></i></a></button>
+            </div>
+            <div>
+                <button class="p-btn"><a href="profile.html" class="links"><i class="ri-profile-line"></i></a></button>
+            </div><div>
+                <button class="logout"><i class="ri-logout-box-line"></i></button>
+    </div>
+</div>
+
+
+</div>
+    </nav>
+
+
+    <nav>
+        <div class="profile">
+               <h2>Dashboard</h2>
+        </div>
+    </nav>
+
+ 
+  
+
+
+<form class="blog-form">
+    <input type="text" class="title" placeholder="title"><br>
+    <input  type="text" class="description" placeholder="Description"><br>
+    <button class="btn">Publish Blog</button>
+</form><br>
+
+<h1 class="h1-head">My Blogs</h1>
+
+<div class="rendering">
+    
+</div>
+<p class="username"></p>
+<script type="module" src="./script/dashboard.js"></script>
 </body>
 </html>

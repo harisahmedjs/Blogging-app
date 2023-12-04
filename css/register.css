@@ -17,7 +17,7 @@ div {
 
 h2 {
     text-align: center;
-    color: #333;
+    color: #7749F8;
 }
 
 input {
@@ -30,7 +30,7 @@ input {
 }
 
 button {
-    background-color: #4caf50;
+    background-color: #7749F8;
     color: white;
     padding: 10px 15px;
     border: none;
@@ -40,11 +40,12 @@ button {
 }
 
 button:hover {
-    background-color: #45a049;
+    background-color: #7749F8;
+    border: 2px solid black;
 }
 
 a {
-    color: #3498db;
+    color: #7749F8;
     text-decoration: none;
     display: block;
     text-align: center;

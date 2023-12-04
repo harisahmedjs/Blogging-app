@@ -49,7 +49,7 @@ try {
     });
 
     console.log('User registered successfully');
-    window.location = 'profile.html';
+    window.location = 'dashboard.html';
 } catch (error) {
     console.error(error);
 

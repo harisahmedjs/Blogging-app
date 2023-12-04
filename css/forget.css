@@ -38,7 +38,7 @@ body {
   
   .forgot {
     padding: 8px 16px;
-    background-color: #4caf50;
+    background-color: #5F3DBE;
     color: #fff;
     border: none;
     border-radius: 4px;
@@ -46,6 +46,12 @@ body {
   }
   
   .forgot:hover {
-    background-color: #45a049;
+    background-color: #5F3DBE;
+    border: 2px solid black;
   }
+  h1{
+    color: #7749F8;
+    text-align: center;
+  }
+
   

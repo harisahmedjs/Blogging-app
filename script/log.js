@@ -16,7 +16,7 @@ btn.addEventListener('click',(event)=>{
   .then((userCredential) => {
     const user = userCredential.user;
     console.log(user);
-   window.location= './profile.html'
+   window.location= './dashboard.html'
   })
   .catch((error) => {
     const errorCode = error.code;
