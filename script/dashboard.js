@@ -26,9 +26,7 @@ onAuthStateChanged(auth, async (user) => {
 const title = document.querySelector('.title');
 const des = document.querySelector('.description');
 const btn = document.querySelector('.btn');
-const div = document.querySelector('.rendering');
-const img = document.querySelector('.img');
-const name = document.querySelector('.username');
+const card = document.querySelector('.rendering');
 const logout = document.querySelector('.logout');
 let arr = [];
 
@@ -45,12 +43,16 @@ let arr = [];
 
 // render function 
 function renderpost() {
-    div.innerHTML='';
+
+    card.innerHTML='';
+
+
     arr.forEach((item) => {
+
         let date = item.postDate.seconds;
         let daterender = new Date(date * 1000).toDateString()
-div.innerHTML += `<div class="rendermain">
-    <div class="render">
+        card.innerHTML += `<div class="rendermain">
+    
         <div class='image-frame'>
             <img src=${docimage} alt='image'>
         </div>
@@ -60,7 +62,7 @@ div.innerHTML += `<div class="rendermain">
         <p class='r-description'>${item.Description}</p>
         <button type="button" id="delete">Delete</button>
         <button type="button" id="update">Edit</button><br>
-    </div>
+  
 </div>`;
     });
     const del = document.querySelectorAll('#delete');
@@ -73,7 +75,7 @@ div.innerHTML += `<div class="rendermain">
                 .then(() => {
                     console.log('post deleted');
                     arr.splice(index, 1);
-                    renderpost()
+               renderpost()
                 });
         })
     })
@@ -85,7 +87,7 @@ div.innerHTML += `<div class="rendermain">
                 Title: updatedTitle
             });
             arr[index].title = updatedTitle;
-            renderpost()
+                renderpost()
 
         })
     })
@@ -109,8 +111,7 @@ async function getDataFromFirestore(uid) {
 
 // data post on firestore 
 btn.addEventListener('click', async (event) => {
-    event.preventDefault();
-
+event.preventDefault();
     const obj = {
         Title: title.value,
         Description: des.value,

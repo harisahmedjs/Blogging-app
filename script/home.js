@@ -1,6 +1,24 @@
+import { onAuthStateChanged ,signOut } from "https://www.gstatic.com/firebasejs/9.10.0/firebase-auth.js";
+import { auth } from "./config.js";
+
 const currentTime = new Date();
 const currentHour = currentTime.getHours();
-const time = document.querySelector('#time')
+const home = document.querySelector('.home-div2');
+const logout = document.querySelector('#loged')
+
+onAuthStateChanged(auth,(user) => {
+    if (!user) {
+        console.log('not a user')
+        home.innerHTML=`<button><a href="log.html"><i class="ri-login-box-line"></i></a></button>`
+        console.log (logout)
+        
+    }
+});
+
+
+// console.log(logout)
+
+    
 
 // time start
 let greeting;
