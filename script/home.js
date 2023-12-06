@@ -1,5 +1,6 @@
 import { onAuthStateChanged ,signOut } from "https://www.gstatic.com/firebasejs/9.10.0/firebase-auth.js";
-import { auth } from "./config.js";
+import { auth,db} from "./config.js";
+import { collection, getDocs,where,Timestamp } from "https://www.gstatic.com/firebasejs/9.10.0/firebase-firestore.js";
 
 const currentTime = new Date();
 const currentHour = currentTime.getHours();
@@ -10,15 +11,20 @@ onAuthStateChanged(auth,(user) => {
     if (!user) {
         console.log('not a user')
         home.innerHTML=`<button><a href="log.html"><i class="ri-login-box-line"></i></a></button>`
-        console.log (logout)
-        
     }
 });
 
+console.log (logout)
 
-// console.log(logout)
+logout.addEventListener('click', () => {
+    signOut(auth).then(() => {
+        console.log('logout successfully');
+        window.location = 'log.html';
+    }).catch((error) => {
+        console.log(error);
+    });
+});
 
-    
 
 // time start
 let greeting;
@@ -38,3 +44,43 @@ const div =document.querySelector('.home-nav')
 div.innerHTML = `<h2 class='div-h2'>${greeting} Readers!</h2>`
 
 // time end
+
+const homeDiv = document.querySelector('#home-div3')
+let image ;
+let  idName;
+
+
+let globalAryy = []
+
+const postsQuerySnapshot = await getDocs(collection(db, "posts"));
+postsQuerySnapshot.forEach((doc) => {
+    globalAryy.push({ ...doc.data(), docId: doc.id });
+// console.log (globalAryy)
+});
+
+globalAryy.map( async(item)=>{
+
+    const usersQuerySnapshot = await getDocs(collection(db, "users"), where('docId', '==', item.docId));
+    console.log(item.docId)
+    usersQuerySnapshot.forEach((user) => {
+       console.log(user.data())
+       idName = user.data().name
+        image = user.data().imageUrl
+        console.log(idName)
+      
+    });
+
+    const timestamp = Math.floor(new Date().getTime() / 1000); // Get current Unix timestamp in seconds
+    const date = new Date(timestamp * 1000); // Convert Unix timestamp to JavaScript Date object
+    const daterender = date.toLocaleDateString(); // Format the date as a string
+    
+    console.log(daterender);
+
+    homeDiv.innerHTML += `
+    <img src=${image} alt='image'>
+<h3 class='r-name'>${idName}</h3>
+<p class='r-date'>${daterender}</p>
+<p class='r-title'>${item.Title}</p>
+<p class='r-description'>${item.Description}</p>`
+
+})

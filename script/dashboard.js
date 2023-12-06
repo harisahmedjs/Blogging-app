@@ -35,7 +35,7 @@ let arr = [];
     logout.addEventListener('click', () => {
         signOut(auth).then(() => {
             console.log('logout successfully');
-            window.location = 'index.html';
+            window.location = 'log.html';
         }).catch((error) => {
             console.log(error);
         });
