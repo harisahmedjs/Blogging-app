@@ -4,17 +4,22 @@ import { auth, db } from './config.js';
 
 let docimage;
 let docnam;
+let userObj;
 onAuthStateChanged(auth, async (user) => {
     if (user) {
-        console.log(user);
+        // console.log(user);
         const uid = user.uid;
-        console.log(uid);
+        // console.log(uid);
         const q = query(collection(db, "users"), where("uid", "==", uid));
         const querySnapshot = await getDocs(q);
         querySnapshot.forEach((doc) => {
-            console.log(doc.data());
+            // console.log(doc.data());
+            userObj = doc.data();
             docimage = doc.data().imageUrl;
             docnam = doc.data().name
+            console.log(userObj)
+            console.log(docimage)
+            console.log(docnam)
         });
         
         // console.log(docnam);
@@ -79,18 +84,21 @@ function renderpost() {
                 });
         })
     })
-    upd.forEach((btn, index) => {
-        btn.addEventListener('click', async () => {
-            console.log('update called', arr[index]);
-            const updatedTitle = prompt('enter new Title');
-            await updateDoc(doc(db, "posts", arr[index].docId), {
-                Title: updatedTitle
-            });
-            arr[index].title = updatedTitle;
-                renderpost()
-
-        })
+   upd.forEach((btn , index)=>{
+    btn.addEventListener('click' ,async ()=>{
+        console.log('edit called', arr[index])
+        const updatedTitle = prompt ('enter updated title', arr[index].Title)
+        const updatedDes = prompt ('enter updated title', arr[index].Description)
+        await updateDoc(doc(db, "posts", arr[index].docId), {
+            Title: updatedTitle,
+            Description: updatedDes,
+            time: Timestamp.fromDate(new Date())
+        });
+        arr[index].Title = updatedTitle;
+        arr[index].Description = updatedDes
+        renderpost()
     })
+   })
 }
 
 // get data on firestore 
@@ -117,6 +125,7 @@ event.preventDefault();
         Description: des.value,
         uid: auth.currentUser.uid,
         postDate: Timestamp.fromDate(new Date()),
+        userObj
     };
 
     try {
@@ -130,4 +139,6 @@ event.preventDefault();
         console.error(error);
         // Handle errors, show messages, etc.
     }
+    title.value = ''
+    Description.value = ''
 });

@@ -55,4 +55,9 @@ try {
 
     // Handle errors, show messages, etc.
 }
+input.value = ''
+email.value = ''
+password.value = ''
+confirmPassword.value = ''
+Photo.value = ''
 });

@@ -27,6 +27,7 @@ btn.addEventListener('click',(event)=>{
     const errorCode = error.code;
     const errorMessage = error.message;
     console.log(errorMessage);
-  });
-
+  })
+  email.value = ''
+  password.value = ''
 })

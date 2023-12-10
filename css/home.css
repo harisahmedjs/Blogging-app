@@ -23,22 +23,11 @@ margin-left: 40px;
 
 .home-div2{
 margin-right: 40px;
-}
-button {
-    background-color: #4caf50;
-    color: white;
-    padding: 10px 12px;
-    border: 1px solid black;
-    border-radius: 4px;
-    cursor: pointer;
-    
-    text-align: center;
-    width: 100%;
+
 }
 
-button:hover {
-    background-color: #45a049;
-}
+
+
 
 a {
     color:white;
@@ -47,13 +36,10 @@ a {
     text-align: center;
 
 }
-.div-h2{
-    color: white;
-    margin-left : 40px;
-}
+
  .home-nav{
     background-color:black;
     padding: 15px;
-
+color: white;
     
 } 

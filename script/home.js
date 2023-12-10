@@ -46,8 +46,6 @@ div.innerHTML = `<h2 class='div-h2'>${greeting} Readers!</h2>`
 // time end
 
 const homeDiv = document.querySelector('#home-div3')
-let image ;
-let  idName;
 
 
 let globalAryy = []
@@ -59,17 +57,9 @@ postsQuerySnapshot.forEach((doc) => {
 });
 
 globalAryy.map( async(item)=>{
-
-    const usersQuerySnapshot = await getDocs(collection(db, "users"), where('docId', '==', item.docId));
-    console.log(item.docId)
-    usersQuerySnapshot.forEach((user) => {
-       console.log(user.data())
-       idName = user.data().name
-        image = user.data().imageUrl
-        console.log(idName)
-      
-    });
-
+console.log(item.userObj.imageUrl)
+    const usersQuerySnapshot = await getDocs(collection(db, "users"), where('uid', '==', item.userObj.uid));
+    console.log(usersQuerySnapshot)
     const timestamp = Math.floor(new Date().getTime() / 1000); // Get current Unix timestamp in seconds
     const date = new Date(timestamp * 1000); // Convert Unix timestamp to JavaScript Date object
     const daterender = date.toLocaleDateString(); // Format the date as a string
@@ -77,8 +67,8 @@ globalAryy.map( async(item)=>{
     console.log(daterender);
 
     homeDiv.innerHTML += `
-    <img src=${image} alt='image'>
-<h3 class='r-name'>${idName}</h3>
+    <img src=${item.userObj.imageUrl} alt='image'>
+<h3 class='r-name'>${item.userObj.name}</h3>
 <p class='r-date'>${daterender}</p>
 <p class='r-title'>${item.Title}</p>
 <p class='r-description'>${item.Description}</p>`
