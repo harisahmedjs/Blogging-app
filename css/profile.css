@@ -46,7 +46,7 @@ h2{
     margin: 50px auto;
     padding: 20px;
     border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 input {
     width: 60%;
@@ -71,16 +71,16 @@ input {
     border: none;
 }
 
-img{
+/* img{
 margin-top: 10px;
 margin-bottom: 12px;
 /* border-radius: 30px;
 width: 300px;
 height: 190px ;
 background-image:cover ; */
-width: 345px;
-height: 304px;
-}
+/* width: 345px;
+height: 304px; */
+/* }  */
 .p-btn{
     
     padding: .50rem 1rem;
@@ -89,10 +89,23 @@ height: 304px;
     font-size: 2rem;
    background-color: transparent;
     cursor: pointer;
+    color: black;
  }
  .p-btn:hover{
     border-bottom: 2px solid black;
   }
+  /* .p-btnn{
+    padding: .50rem 1rem;
+    outline:none ;
+    border: none;
+    font-size: 2rem;
+   background-color: transparent;
+    cursor: pointer;
+    color: black;
+  }
+  .p-btnn:hover{
+    border-bottom: 2px solid black;
+  } */
 
 .logout{
 
@@ -117,7 +130,7 @@ height: 304px;
     display: flex;
     justify-content: center;
     gap: 15px;
-
+color: black;
 }
 .img-1{
     width: 20px;
@@ -128,3 +141,17 @@ height: 304px;
     text-decoration: none;
     color: black;
 }
+/* .image-frame {
+    width: 10rem;
+    height: 100%;
+    border-radius: 20%;
+    border: 5px solid rgb(0, 0, 0);
+    overflow: hidden; /* Ensure that the image doesn't overflow the frame */
+  /* } */ 
+
+  .image {
+    width: 10rem;
+    height: 100%;
+    object-fit: cover; /* Maintain aspect ratio and cover the entire frame */
+    border-radius: 20%; /* Same border-radius as the frame */
+  }

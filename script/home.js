@@ -4,13 +4,13 @@ import { collection, getDocs,where,Timestamp } from "https://www.gstatic.com/fir
 
 const currentTime = new Date();
 const currentHour = currentTime.getHours();
-const home = document.querySelector('.home-div2');
+const home = document.querySelector('.p-div');
 const logout = document.querySelector('#loged')
 
 onAuthStateChanged(auth,(user) => {
     if (!user) {
         console.log('not a user')
-        home.innerHTML=`<button><a href="log.html"><i class="ri-login-box-line"></i></a></button>`
+        home.innerHTML=`<button class = 'p-btn'><a href="log.html"><i class="ri-login-box-line"></i></a></button>`
     }
 });
 

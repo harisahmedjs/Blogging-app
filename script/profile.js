@@ -8,6 +8,7 @@ const nameUser = document.querySelector('.user-name');
 const button = document.querySelector('.but');
 const nPassword = document.querySelector('.c-password');
 const rPassword = document.querySelector('.r-password');
+const Password = document.querySelector('.password');
 
 let userData;
 
@@ -57,4 +58,5 @@ button.addEventListener('click', () => {
   }
 nPassword.value = ''
 rPasswordPassword.value = ''
+Password.value = ''
 });
