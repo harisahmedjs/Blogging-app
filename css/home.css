@@ -1,45 +1,33 @@
-*{
-    margin: 0%;
-    padding: 0;
-    box-sizing: border-box;
- 
+* {
+  margin: 0%;
+  padding: 0;
+  box-sizing: border-box;
 }
-body{
-    font-family: Arial, sans-serif;
-    
+body {
+  font-family: Arial, sans-serif;
 }
 
-.home-div{
-display: flex;
-justify-content: space-between;
-background-color:#7749F8;
-color: white;
-padding: 10px;
+.home-div {
+  display: flex;
+  justify-content: space-between;
+  background-color: #7749f8;
+  color: white;
+  padding: 10px;
 }
 
-.home-div1{
-margin-left: 40px;
+.home-div1 {
+  margin-left: 40px;
 }
-
-.home-div2{
-margin-right: 40px;
-
-}
-
-
-
 
 a {
-    color:white;
-    text-decoration: none;
-    display: block;
-    text-align: center;
-
+  color: white;
+  text-decoration: none;
+  display: block;
+  text-align: center;
 }
 
- .home-nav{
-    background-color:black;
-    padding: 15px;
-color: white;
-    
-} 
+.home-nav {
+  background-color: black;
+  padding: 15px;
+  color: white;
+}

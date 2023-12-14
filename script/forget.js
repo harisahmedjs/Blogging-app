@@ -6,7 +6,7 @@ const forgot = document.querySelector('.forgot');
 forgot.addEventListener('click', (event) => {
     event.preventDefault();
 
-    const email = document.querySelector('.email').value; // Move this line inside the event listener
+    const email = document.querySelector('.email').value; 
 
     sendPasswordResetEmail(auth, email)
         .then(() => {

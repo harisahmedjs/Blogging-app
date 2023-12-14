@@ -57,6 +57,6 @@ button.addEventListener('click', () => {
       });
   }
 nPassword.value = ''
-rPasswordPassword.value = ''
+rPassword.value = ''
 Password.value = ''
 });

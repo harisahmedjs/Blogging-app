@@ -38,8 +38,7 @@ if (currentHour >= 5 && currentHour < 12) {
     greeting = 'Good Night';
 }
 console.log(greeting);
-// const text = document.createTextNode(`${greeting} Raaders!`)
-// time.appendChild(text)
+
 const div =document.querySelector('.home-nav')
 div.innerHTML = `<h2 class='div-h2'>${greeting} Readers!</h2>`
 
@@ -53,16 +52,16 @@ let globalAryy = []
 const postsQuerySnapshot = await getDocs(collection(db, "posts"));
 postsQuerySnapshot.forEach((doc) => {
     globalAryy.push({ ...doc.data(), docId: doc.id });
-// console.log (globalAryy)
+
 });
 
 globalAryy.map( async(item)=>{
 console.log(item.userObj.imageUrl)
     const usersQuerySnapshot = await getDocs(collection(db, "users"), where('uid', '==', item.userObj.uid));
     console.log(usersQuerySnapshot)
-    const timestamp = Math.floor(new Date().getTime() / 1000); // Get current Unix timestamp in seconds
-    const date = new Date(timestamp * 1000); // Convert Unix timestamp to JavaScript Date object
-    const daterender = date.toLocaleDateString(); // Format the date as a string
+    const timestamp = Math.floor(new Date().getTime() / 1000); 
+    const date = new Date(timestamp * 1000); 
+    const daterender = date.toLocaleDateString(); 
     
     console.log(daterender);
 

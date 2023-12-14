@@ -1,38 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="./css/profile.css">
-</head>
-<body>
-        <div class="profile-div">
+    <link rel="stylesheet" href="./css/profile.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="profile-main">
+      <div class="profiles-div">
         <h1>Personal Blogging App</h1>
+      </div>
+      <div class="p-div">
+        <div>
+          <button class="p-btn">
+            <a href="index.html" class="links"
+              ><i class="ri-home-3-line"></i
+            ></a>
+          </button>
         </div>
-    </nav>
-
+        <div>
+          <button class="p-btn">
+            <a href="dashboard.html" class="links"
+              ><i class="ri-dashboard-line"></i
+            ></a>
+          </button>
+        </div>
+        <div>
+          <button class="logout"><i class="ri-logout-box-line"></i></button>
+        </div>
+      </div>
+    </div>
 
     <nav>
-        <div class="profile">
-               <h2>Profile</h2>
-        </div>
+      <div class="profile">
+        <h2>Profile</h2>
+      </div>
     </nav>
 
+    <div class="main">
+      <img src="" alt="" class="image" /><br />
 
-<div class="main">
-    <div class="image-frame">
-<img src ='' alt="" class="image"><br>
-</div>
-<h2 class="user-name">name</h2>
+      <h2 class="user-name"></h2>
 
-    <input type="password" placeholder="Password" class="password" required><br>
-    <input type="password" placeholder="Confirm Password" class="c-password" required><br>
-    <input type="password" placeholder="Repeat Password" class="r-password" required><br>
+      <input
+        type="password"
+        placeholder="Password"
+        class="password"
+        required
+      /><br />
+      <input
+        type="password"
+        placeholder="Confirm Password"
+        class="c-password"
+        required
+      /><br />
+      <input
+        type="password"
+        placeholder="Repeat Password"
+        class="r-password"
+        required
+      /><br />
 
- <button class="but">Update password</button>
-</div>
+      <button class="but">Update password</button>
+    </div>
 
     <script type="module" src="./script/profile.js"></script>
-</body>
+  </body>
 </html>

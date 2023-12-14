@@ -1,58 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/dashboard.css">
-    <link rel="stylesheet" href="./css/profile.css">
-    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
-    
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/dashboard.css" />
+    <link rel="stylesheet" href="./css/profile.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+
     <title>Document</title>
-</head>
-<body>
+  </head>
+  <body>
     <div class="profile-main">
-    <div class="profiles-div">
-    
+      <div class="profiles-div">
         <h1>Personal Blogging App</h1>
+      </div>
+      <div class="p-div">
+        <div>
+          <button class="p-btn">
+            <a href="index.html" class="links"
+              ><i class="ri-home-3-line"></i
+            ></a>
+          </button>
         </div>
-        <div class="p-div">
-            <div>
-                <button class="p-btn"><a href="index.html" class="links"><i class="ri-home-3-line"></i></a></button>
-            </div>
-            <div>
-                <button class="p-btn"><a href="profile.html" class="links"><i class="ri-profile-line"></i></a></button>
-            </div><div>
-                <button class="logout"><i class="ri-logout-box-line"></i></button>
+        <div>
+          <button class="p-btn">
+            <a href="profile.html" class="links"
+              ><i class="ri-profile-line"></i
+            ></a>
+          </button>
+        </div>
+        <div>
+          <button class="logout"><i class="ri-logout-box-line"></i></button>
+        </div>
+      </div>
     </div>
-</div>
-
-
-</div>
-    </nav>
-
 
     <nav>
-        <div class="profile">
-               <h2>Dashboard</h2>
-        </div>
+      <div class="profile">
+        <h2>Dashboard</h2>
+      </div>
     </nav>
 
- 
-  
+    <div class="main-container">
+      <h2 class="Create">
+        Create Blog <span><i class="fa-regular fa-pen-to-square"></i></span>
+      </h2>
+      <form class="blog-form">
+        <input
+          type="text"
+          class="title"
+          placeholder="Title (5-50 characters)"
+          required
+          minlength="5"
+          maxlength="50"
+        /><br />
+        <textarea
+          class="description"
+          placeholder="Description (100-3000 characters)"
+          required
+          minlength="100"
+          maxlength="3000"
+        ></textarea>
 
+        <button class="btn" value="submit">Publish Blog</button>
+      </form>
+      <br />
+    </div>
+    <h1 class="h1-head">My Blogs</h1>
 
-<form class="blog-form">
-    <input type="text" class="title" placeholder="title"><br>
-    <input  type="text" class="description" placeholder="Description"><br>
-    <button class="btn" value="submit">Publish Blog</button>
-</form><br>
-
-<h1 class="h1-head">My Blogs</h1>
-
-<div class="rendering">
-    
-</div>
-<p class="username"></p>
-<script type="module" src="./script/dashboard.js"></script>
-</body>
+    <div class="rendering"></div>
+    <p class="username"></p>
+    <script type="module" src="./script/dashboard.js"></script>
+    <script
+      src="https://kit.fontawesome.com/5562aae272.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
 </html>
