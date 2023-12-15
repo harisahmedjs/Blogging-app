@@ -1,10 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=YourFontFamily&display=swap');
+
 * {
   margin: 0%;
   padding: 0;
   box-sizing: border-box;
 }
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Poppins', sans-serif;
 }
 .profile-div {
   display: flex;
@@ -113,13 +115,12 @@ input {
   height: 100%;
   object-fit: cover;
   border-radius: 20%;
-  border: 6px solid black;
+  /* border: 6px solid black; */
 }
 
 .dash-image{
-  width: 5rem;
-  height: 100%;
+  width: 5.5rem;
   object-fit: cover;
   border-radius: 20%;
-  border: 4px solid black;
+  /* border: 4px solid black; */
 }

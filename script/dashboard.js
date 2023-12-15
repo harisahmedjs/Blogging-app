@@ -68,15 +68,22 @@ function renderpost() {
   arr.forEach((item) => {
     let date = item.postDate.seconds;
     let daterender = new Date(date * 1000).toDateString();
-    card.innerHTML += `<div class="rendermain">
-            <img src=${docimage} alt='image' class = 'dash-image'>
-        <h3 class='r-name'>${docnam}</h3>
-        <p class='r-date'>${daterender}</p>
-        <p class='r-title'>${item.Title}</p>
+    card.innerHTML += `<div class="render-main">
+    <div class = 'r-div'>
+    <div><img src=${docimage} alt='image' class = 'dash-image'></div>
+    <div class = 'render-div'>
+    <div><h2 class='r-title'>${item.Title}</h2></div>
+    <div class = 'render-div1' >
+    <p class='r-name'>${docnam}</p>&nbsp-
+    <div><p class='r-date'>${daterender}</p></div>
+    </div>
+    </div>
+    </div>
         <p class='r-description'>${item.Description}</p>
-        <button type="button" id="delete">Delete</button>
-        <button type="button" id="update">Edit</button><br>
-  
+        <div class = 'button-div'>
+        <div><button type="button" id="delete"><i class="ri-delete-bin-2-line"></i></button></div>
+        <div><button type="button" id="update"><i class="fa-regular fa-pen-to-square"></i></button><br></div>
+  </div>
 </div>`;
   });
   const del = document.querySelectorAll("#delete");

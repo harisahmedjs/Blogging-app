@@ -44,6 +44,7 @@ textarea {
   margin-top: 20px;
   font-size: 18px;
   font-family: sans-serif;
+  border-radius: 10px;
 }
 textarea::placeholder {
   color: grey;
@@ -77,28 +78,65 @@ textarea::placeholder {
 .btn:hover {
   background-color: #5f3dbe;
 }
-
+.button-div{
+  gap: 20px;
+  display: flex;
+  margin-top: 20px;
+}
 #delete {
-  background-color: white;
+  background: transparent;
   border: none;
-  padding: 10px 15px;
+  padding: 10px ;
+  color: #5f3dbe;
   cursor: pointer;
   border-radius: 5px;
-  font-size: 1em;
-  transition: background-color 0.3s ease;
+  font-size: 1.6rem;
 }
 #delete:hover {
   background-color: black;
 }
 
 #update {
-  background-color: white;
+  background: transparent;
   border: none;
-  padding: 10px 15px;
+  padding: 10px ;
+  color: #5f3dbe;
   cursor: pointer;
   border-radius: 5px;
-  font-size: 1em;
+  font-size: 1.6rem;
 }
 #update:hover {
   background-color: black;
+}
+.render-main{
+   width: 70%;
+  background-color: #f2f2f2;
+  margin-top: 25px;
+  margin-left: 30px;
+  border-radius: 20px;
+  word-wrap: break-word;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+padding: 30px;
+}
+.r-div{
+  display: flex;
+  
+}
+.render-div1{
+  display: flex;
+  margin-top: 8px;
+  margin-left: 35px;
+  font-size: large;
+
+}
+.r-title{
+  margin-top: 20px;
+  margin-left: 25px;
+}
+.r-date{
+  margin-left: 4px;
+}
+.r-description{
+  margin-top: 10px;
+  font-size: medium;
 }

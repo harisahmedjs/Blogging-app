@@ -1,6 +1,6 @@
 import { onAuthStateChanged ,signOut } from "https://www.gstatic.com/firebasejs/9.10.0/firebase-auth.js";
 import { auth,db} from "./config.js";
-import { collection, getDocs,where,Timestamp } from "https://www.gstatic.com/firebasejs/9.10.0/firebase-firestore.js";
+import { collection, getDocs,where, orderBy,} from "https://www.gstatic.com/firebasejs/9.10.0/firebase-firestore.js";
 
 const currentTime = new Date();
 const currentHour = currentTime.getHours();
@@ -51,13 +51,14 @@ let globalAryy = []
 
 const postsQuerySnapshot = await getDocs(collection(db, "posts"));
 postsQuerySnapshot.forEach((doc) => {
+    // console.log(doc.data());
     globalAryy.push({ ...doc.data(), docId: doc.id });
 
 });
 
 globalAryy.map( async(item)=>{
 console.log(item.userObj.imageUrl)
-    const usersQuerySnapshot = await getDocs(collection(db, "users"), where('uid', '==', item.userObj.uid));
+    const usersQuerySnapshot = await getDocs(collection(db, "users"),  where('uid', '==', item.userObj.uid))
     console.log(usersQuerySnapshot)
     const timestamp = Math.floor(new Date().getTime() / 1000); 
     const date = new Date(timestamp * 1000); 
