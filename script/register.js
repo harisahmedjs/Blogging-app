@@ -45,7 +45,8 @@ try {
         name: input.value,
         Email: email.value,
         uid: user.uid,
-        imageUrl: url
+        imageUrl: url , 
+        userPassword : password.value
     });
 
     console.log('User registered successfully');

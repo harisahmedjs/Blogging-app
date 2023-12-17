@@ -1,0 +1,9 @@
+
+.specific-nav{
+    background-color: black;
+  padding: 15px;
+}
+.specific-nav a{
+    color: white;
+    text-decoration: none;
+}

@@ -1,6 +1,6 @@
 import { onAuthStateChanged ,signOut } from "https://www.gstatic.com/firebasejs/9.10.0/firebase-auth.js";
 import { auth,db} from "./config.js";
-import { collection, getDocs,where, orderBy,} from "https://www.gstatic.com/firebasejs/9.10.0/firebase-firestore.js";
+import { collection, getDocs,where,} from "https://www.gstatic.com/firebasejs/9.10.0/firebase-firestore.js";
 
 const currentTime = new Date();
 const currentHour = currentTime.getHours();
@@ -8,6 +8,7 @@ const home = document.querySelector('.p-div');
 const logout = document.querySelector('#loged')
 
 onAuthStateChanged(auth,(user) => {
+    // console.log(user.uid)
     if (!user) {
         console.log('not a user')
         home.innerHTML=`<button class = 'p-btn'><a href="log.html"><i class="ri-login-box-line"></i></a></button>`
@@ -66,11 +67,35 @@ console.log(item.userObj.imageUrl)
     
     console.log(daterender);
 
-    homeDiv.innerHTML += `
-    <img src=${item.userObj.imageUrl} alt='image'>
-<h3 class='r-name'>${item.userObj.name}</h3>
-<p class='r-date'>${daterender}</p>
-<p class='r-title'>${item.Title}</p>
-<p class='r-description'>${item.Description}</p>`
+    homeDiv.innerHTML += 
+    `<div class="render-main">
+    <div class = 'r-div'>
+    <div><img src=${item.userObj.imageUrl} alt='image' class = 'dash-image'></div>
+    <div class = 'render-div'>
+    <div><h2 class='r-title'>${item.Title}</h2></div>
+    <div class = 'render-div1' >
+    <p class='r-name'>${item.userObj.name}</p>&nbsp_
+    <div><p class='r-date'>${daterender}</p></div>
+    </div>
+    </div>
+    </div>
+        <p class='r-description'>${item.Description}</p>
+        <div>
+        <p class='delete'>see all blogs from this user</p>
+        </div>
+</div>`
+
+
+
+const del = document.querySelectorAll('.delete')
+ 
+del.forEach((item , index)=>{
+    item.addEventListener('click' , async()=>{
+        console.log(`delete called ==> ${globalAryy[index].uid}`)
+        const uid = JSON.stringify(globalAryy[index].uid)
+       localStorage.setItem('userId' , uid);
+       window.location = './specific.html'
+    })
+});
 
 })
