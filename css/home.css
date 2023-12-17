@@ -31,3 +31,11 @@ a {
   padding: 15px;
   color: white;
 }
+.all{
+  margin-top: 10px;
+  text-align: right;
+  cursor: pointer;
+}
+.all:hover{
+  color: #5f3dbe;
+}

@@ -68,7 +68,8 @@ function renderpost() {
   arr.forEach((item) => {
     let date = item.postDate.seconds;
     let daterender = new Date(date * 1000).toDateString();
-    card.innerHTML += `<div class="render-main">
+    card.innerHTML += `
+    <div class="render-main">
     <div class = 'r-div'>
     <div><img src=${docimage} alt='image' class = 'dash-image'></div>
     <div class = 'render-div'>

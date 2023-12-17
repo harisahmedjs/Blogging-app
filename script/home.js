@@ -61,10 +61,11 @@ globalAryy.map( async(item)=>{
 console.log(item.userObj.imageUrl)
     const usersQuerySnapshot = await getDocs(collection(db, "users"),  where('uid', '==', item.userObj.uid))
     console.log(usersQuerySnapshot)
-    const timestamp = Math.floor(new Date().getTime() / 1000); 
-    const date = new Date(timestamp * 1000); 
-    const daterender = date.toLocaleDateString(); 
-    
+    // const timestamp = Math.floor(new Date().getTime() / 1000); 
+    // const date = new Date(timestamp * 1000); 
+    // const daterender = date.toLocaleDateString(); 
+    let date = item.postDate.seconds;
+    let daterender = new Date(date * 1000).toDateString();
     console.log(daterender);
 
     homeDiv.innerHTML += 
@@ -81,13 +82,13 @@ console.log(item.userObj.imageUrl)
     </div>
         <p class='r-description'>${item.Description}</p>
         <div>
-        <p class='delete'>see all blogs from this user</p>
+        <p class='all'>see all blogs from this user</p>
         </div>
 </div>`
 
 
 
-const del = document.querySelectorAll('.delete')
+const del = document.querySelectorAll('.all')
  
 del.forEach((item , index)=>{
     item.addEventListener('click' , async()=>{
