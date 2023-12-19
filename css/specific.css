@@ -17,7 +17,7 @@
   cursor: pointer;
 }
 .s-btn a{
-  color: black;
+  color: white;
   text-decoration: none;
 }
 .s-btn:hover{
@@ -49,9 +49,18 @@ display: flex;
 padding: 30px;
 }
 .s-image{
-  width: 10rem;
+  width: 13rem;
 height: 100%;
 object-fit: cover;
-border-radius: 20%;
+border-radius: 10%;
 } 
+.name{
+margin-right: 70px;
+font-size: x-large;
+}
+.email{
+  margin-left: 10px;
+  font-size: large;
+
+}
   

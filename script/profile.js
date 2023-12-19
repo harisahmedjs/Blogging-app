@@ -1,4 +1,4 @@
-import { updatePassword, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/9.10.0/firebase-auth.js";
+import { updatePassword, onAuthStateChanged , signOut,} from "https://www.gstatic.com/firebasejs/9.10.0/firebase-auth.js";
 import { auth, db } from "./config.js";
 import { collection, getDocs, query, where } from "https://www.gstatic.com/firebasejs/9.10.0/firebase-firestore.js";
 
@@ -9,6 +9,7 @@ const button = document.querySelector('.but');
 const nPassword = document.querySelector('.c-password');
 const rPassword = document.querySelector('.r-password');
 const Password = document.querySelector('.password');
+const logout = document.querySelector('.logout');
 
 let userData;
 
@@ -59,4 +60,17 @@ button.addEventListener('click', () => {
 nPassword.value = ''
 rPassword.value = ''
 Password.value = ''
+});
+
+
+
+logout.addEventListener("click", () => {
+  signOut(auth)
+    .then(() => {
+      console.log("logout successfully");
+      window.location = "log.html";
+    })
+    .catch((error) => {
+      console.log(error);
+    });
 });
