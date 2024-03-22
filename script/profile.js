@@ -39,7 +39,7 @@ const getUserData = async () => {
 getUserData()
   .then((user) => {
     userData = user;
-    console.log(userData); // auth.currentUser is now accessible here
+    console.log(userData); 
   })
   .catch((error) => {
     console.error(error);

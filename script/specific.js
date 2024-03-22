@@ -16,8 +16,7 @@ const logout = document.querySelector('#loged')
 const div = document.querySelector('.rendering')
 const image = document.querySelector('.s-image')
 const email = document.querySelector('.email')
-const name = document.querySelector('.name')
-
+const name = document.querySelector('.name') 
 
 
 
