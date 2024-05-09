@@ -54,11 +54,15 @@ onAuthStateChanged(auth, async (user) => {
       console.log(userObj);
       console.log(docimage);
       console.log(docnam);
+
     });
 
     // console.log(docnam);
     // Fetch and render user-specific posts
     getDataFromFirestore(uid);
+  }
+  else{
+    window.location = '/log.html'
   }
 });
 

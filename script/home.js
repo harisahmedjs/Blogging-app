@@ -13,6 +13,7 @@ onAuthStateChanged(auth,(user) => {
         console.log('not a user')
         home.innerHTML=`<button class = 'p-btn'><a href="log.html"><i class="ri-login-box-line"></i></a></button>`
     }
+    
 });
 
 console.log (logout)

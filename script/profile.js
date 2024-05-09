@@ -29,7 +29,7 @@ const getUserData = async () => {
 
         resolve(user);
       } else {
-        window.location = './index.html';
+        window.location = './log.html';
         reject(new Error('User not authenticated'));
       }
     });
@@ -67,7 +67,7 @@ button.addEventListener('click', () => {
     return
   
   } else {
-    updatePassword(userData, nPassword.value)
+    updatePassword(userData , nPassword.value)
       .then(() => {
         const Toast = Swal.mixin({
           toast: true,

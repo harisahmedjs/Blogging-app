@@ -25,7 +25,9 @@ onAuthStateChanged(auth,(user) => {
     if (!user) {
         console.log('not a user')
         home.innerHTML=`<button class = 's-btn'><a href="log.html"><i class="ri-login-box-line"></i></a></button>`
+        window.location = '/log.html'
     }
+   
 });
 
 
